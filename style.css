@@ -1,0 +1,46 @@
+:root {
+  --color-font: hsl(193, 38%, 86%);
+  --color-dice: hsl(150, 100%, 66%);
+  --color-box-background: hsl(217, 19%, 38%);
+  --color-background: hsl(217, 19%, 24%);
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--color-background);
+  font-weight: 800;
+  display: flex;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  align-items: center;
+  color: var(--color-font);
+  font-family: 'Manrope', sans-serif;
+}
+
+.container {
+  display: flex;
+  align-items: flex-start;
+  background: var(--color-box-background);
+  text-align: center;
+  border-radius: 15px;
+}
+
+.container p {
+  margin-top: 35px;
+  letter-spacing: 5px;
+  font-size: 16px;
+  color: var(--color-dice);
+}
+
+h1 {
+  margin: 15px 40px;
+  font-size: 28px;
+  max-width: 450px;
+}
