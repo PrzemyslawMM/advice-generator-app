@@ -15,11 +15,12 @@
 }
 
 body {
+  width: 530px;
   background: var(--color-background);
   font-weight: 800;
   display: flex;
   height: 100vh;
-  margin: 0;
+  margin: auto;
   padding: 0;
   justify-content: center;
   align-items: center;
@@ -49,6 +50,9 @@ body {
 }
 
 .container__advice {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   min-height: 224px;
 }
 
@@ -97,7 +101,45 @@ h1 {
 
 .dice:hover,
 .dice:focus-visible {
-  -webkit-box-shadow: 0px 0px 15px 1px var(--color-dice);
-  -moz-box-shadow: 0px 0px 15px 1px var(--color-dice);
-  box-shadow: 0px 0px 15px 1px var(--color-dice);
+  -webkit-box-shadow: 0 0 15px 1px var(--color-dice);
+  -moz-box-shadow: 0 0 15px 1px var(--color-dice);
+  box-shadow: 0 0 15px 1px var(--color-dice);
+}
+
+@media screen and (max-width: 600px) {
+  body {
+    width: 375px;
+  }
+  h1 {
+    margin: 0;
+    max-width: 200px;
+    font-size: 16px;
+  }
+
+  .container {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 375px;
+  }
+
+  .container__advice {
+    width: 375px;
+  }
+
+  .divider {
+    margin-top: 0;
+    background: url('../images/pattern-divider-mobile.svg') no-repeat center;
+  }
+
+  .wrapper {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .dice {
+    bottom: -50px;
+  }
 }

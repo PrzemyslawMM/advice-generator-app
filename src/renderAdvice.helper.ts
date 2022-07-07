@@ -15,6 +15,7 @@ export const renderAdvice: (
 
   const adviceTextElement = document.createElement('h1');
   adviceTextElement.innerText = `"${data.advice}"`;
+
   adviceContainer.appendChild(adviceNumberElement);
   adviceContainer.appendChild(adviceTextElement);
 };
