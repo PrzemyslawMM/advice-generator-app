@@ -3,12 +3,15 @@
   --color-dice: hsl(150, 100%, 66%);
   --color-box-background: hsl(217, 19%, 38%);
   --color-background: hsl(217, 19%, 24%);
+  --color-shadow: hsl(218, 23%, 16%);
 }
 
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -26,10 +29,16 @@ body {
 
 .container {
   display: flex;
+  position: relative;
   align-items: flex-start;
   background: var(--color-box-background);
   text-align: center;
   border-radius: 15px;
+  padding-top: 25px;
+  min-height: 362px;
+  -webkit-box-shadow: 18px 16px 21px -5px var(--color-shadow);
+  -moz-box-shadow: 18px 16px 21px -5px var(--color-shadow);
+  box-shadow: 18px 16px 21px -5px var(--color-shadow);
 }
 
 .container p {
@@ -39,8 +48,56 @@ body {
   color: var(--color-dice);
 }
 
+.container__advice {
+  min-height: 224px;
+}
+
 h1 {
-  margin: 15px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 50px 40px;
   font-size: 28px;
   max-width: 450px;
+  min-height: 190px;
+}
+
+.divider {
+  margin-top: 50px;
+  background: url('../images/pattern-divider-desktop.svg') no-repeat center;
+  width: 530px;
+  height: 16px;
+  margin-right: 0;
+}
+
+.dice {
+  position: relative;
+  bottom: -25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  background: var(--color-dice);
+  border-radius: 1000px;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
+.dice img {
+  width: 24px;
+  height: 24px;
+}
+
+.container__dice {
+  display: flex;
+  justify-content: center;
+}
+
+.dice:hover,
+.dice:focus-visible {
+  -webkit-box-shadow: 0px 0px 15px 1px var(--color-dice);
+  -moz-box-shadow: 0px 0px 15px 1px var(--color-dice);
+  box-shadow: 0px 0px 15px 1px var(--color-dice);
 }

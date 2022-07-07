@@ -2,7 +2,7 @@ const path = require('path');
 
 module.exports = {
   entry: './src/index.ts',
-  mode: 'development',
+  mode: 'production',
   module: {
     rules: [
       {
@@ -20,5 +20,11 @@ module.exports = {
     publicPath: 'public',
     filename: 'bundle.js',
     path: path.resolve(__dirname, 'public'),
+  },
+  devServer: {
+    port: 8080,
+    hot: true,
+    publicPath: '/public',
+    watchContentBase: true,
   },
 };

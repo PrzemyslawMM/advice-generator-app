@@ -33,6 +33,8 @@
                 "printWidth": 80
             }
         ],
+        "no-param-reassign": "off",
+        "operator-linebreak": "off",
         "import/prefer-default-export": "off",
         "import/extensions": [
             "error",
